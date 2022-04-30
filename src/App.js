@@ -6,6 +6,7 @@ import Home from './Components/HomePage/Home';
 import RequireAuth from './Components/RequireAuth/RequireAuth';
 import Inventory from './Components/Inventory/Inventory';
 import LogIn from './Components/LogIn/LogIn';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         </RequireAuth>} />
         <Route path='/logIn' element={<LogIn/>}/>
       </Routes>
+      <Footer/>
       <ToastContainer />
     </div>
   );

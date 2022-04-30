@@ -12,7 +12,7 @@ const LogIn = () => {
           <input className='w-3/4 rounded-xl bg-slate-200 p-2 m-2' type="password" name='password' /><br />
           <input className='w-3/4 rounded-xl bg-slate-200 p-2 m-2' type="submit" value="Sign In" /><br />
           <p className="text-center text-stone-50 p-4">
-          New to here?
+          New Buyer?
           <span className="hover:bg-[#8661fe] ml-2 p-2 rounded-2xl" onClick={() => navigate("/register")}>
             Please Sign Up
           </span>
