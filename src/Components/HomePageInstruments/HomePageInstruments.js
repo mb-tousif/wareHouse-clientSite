@@ -1,24 +1,29 @@
 import React from "react";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const HomePageInstruments = ({ instrument }) => {
   const { name, img, description } = instrument;
+  
   return (
-    <div className="flex justify-center">
-      <div className="rounded-lg shadow-lg bg-white max-w-sm">
-        <img className="rounded-t-lg" src={img} alt="product"/>
+    <div
+      data-aos="flip-right"
+      data-aos-easing="linear"
+      data-aos-duration="4000"
+      className="flex justify-center m-6 text-[#17849d]"
+    >
+      <div className="rounded-lg shadow-2xl bg-[#d7dfe3] max-w-sm">
+        <img className="rounded-t-lg h-72" src={img} alt="product" />
         <div className="p-6">
-          <h5 className="text-gray-900 text-xl font-medium mb-2">{name}</h5>
-          <p className="text-gray-700 text-base mb-4">{description}</p>
+          <h5 className="text-xl font-medium mb-2">{name}</h5>
+          <p className="text-base mb-4">{description}</p>
           <button
             type="button"
-            className=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
-          >
-            Button
-          </button>
+            className=" inline-block px-6 py-2.5 bg-[#9353e1] text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-[#7130be] hover:shadow-lg focus:bg-[#8a3beb] focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#420b85] active:shadow-lg transition duration-150 ease-in-out"
+          >Button</button>
         </div>
       </div>
     </div>
   );
 };
-
+AOS.init();
 export default HomePageInstruments;
