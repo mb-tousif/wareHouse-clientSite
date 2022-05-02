@@ -1,13 +1,13 @@
 import React from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Banner from "../../topBanner.png";
+import Banner from "../../images/topBanner.png";
 
 const topBanner = () => {
   return (
     <div className="md:grid p-4 grid-cols-2">
       <div className="">
-        <h1 className="text-[#17849d] m-2 md:text-2xl font-medium">
+        <h1 data-aos="fade-down" data-aos-duration="3000" className="text-[#17849d] m-2 md:text-3xl font-medium">
           High Quality Neurosurgical Instruments
         </h1>
         <p className="text-justify text-[#286e7d]">
