@@ -28,7 +28,7 @@ const HomePageInstruments = ({ instrument }) => {
             data-aos="fade-down"
             data-aos-easing="linear"
             data-aos-duration="2000"
-            className=" inline-block px-6 py-2.5 bg-[#17849d] text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-[#7130be] hover:shadow-lg focus:bg-[#8a3beb] focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#2c0260] active:shadow-lg transition duration-150 ease-in-out"
+            className="block mx-auto my-auto p-3 bg-[#17849d] text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-[#7130be] hover:shadow-lg focus:bg-[#8a3beb] focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#2c0260] active:shadow-lg transition duration-150 ease-in-out"
           >
             Update Stock
           </button>
@@ -38,7 +38,7 @@ const HomePageInstruments = ({ instrument }) => {
             data-aos="fade-up"
             data-aos-easing="linear"
             data-aos-duration="2000"
-            className="mt-4 inline-block px-6 py-2.5 bg-[#17849d] text-white rounded-full shadow-md hover:bg-purple-700 focus:bg-purple-600 focus:shadow-lg focus:outline-none active:bg-purple-900 transition duration-150 ease-in-out"
+            className="mt-4 mx-auto my-auto block p-3 bg-[#17849d] text-white rounded-full shadow-md hover:bg-purple-700 focus:bg-purple-600 focus:shadow-lg focus:outline-none active:bg-purple-900 transition duration-150 ease-in-out"
           >
             Manage Inventories &#10148;
           </button>

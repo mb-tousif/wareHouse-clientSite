@@ -12,10 +12,10 @@ const CoreValues = () => {
         Our Core Values!
       </h1>
       <div className="md:grid grid-cols-2">
-        <div className="w4/6 m-4 text-left text-[#46666d]">
+        <div className="w4/6 ml-4 text-justify mx-auto my-auto text-[#46666d]">
           <h1 data-aos="fade-down" className="m-2 md:text-xl">
             INTEGRITY!
-          </h1>
+          </h1> 
           <p data-aos="fade-up-right">
             We are ethical, sincere and concentrate on what we do best.
             Everything we do must stand the test of public scrutiny.

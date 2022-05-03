@@ -8,6 +8,7 @@ import Inventory from './Components/Inventory/Inventory';
 import LogIn from './Components/LogIn/LogIn';
 import Footer from './Components/Footer/Footer';
 import ManageInventory from './Components/manageInventory/ManageInventory';
+import Register from './Components/Register/Register';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
         </RequireAuth>} />
         <Route path='/logIn' element={<LogIn/>}/>
         <Route path='/inventory' element={<ManageInventory/>}/>
-
+        <Route path='/register' element={<Register/>}/>
       </Routes>
       <Footer/>
       <ToastContainer />

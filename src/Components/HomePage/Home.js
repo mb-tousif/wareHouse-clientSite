@@ -12,16 +12,10 @@ const Home = () => {
     const [instruments] = useData();
     // console.log(instruments);
     return (
-      <div>
+      <div className='w-full'>
         <marquee className="w-3/5 p-2 font-bold text-emerald-800" behavior="scroll" direction="left">&#9993; মাস্ক ব্যবহার করুন, নিরাপদ থাকুন।</marquee>
         <TopBanner />
-        <h1
-          data-aos="fade-up"
-          data-aos-duration="3000"
-          className="md:text-3xl font-bold text-[#17849d] md:p-10"
-        >
-          Our Some Leading Products
-        </h1>
+        <h1 data-aos="fade-up" data-aos-duration="3000" className="md:text-3xl font-bold text-[#17849d] md:p-10">Our Some Leading Products</h1>
         <div className="md:grid gap-10 md:grid-cols-3">
           {instruments
             .map((instrument) => (
