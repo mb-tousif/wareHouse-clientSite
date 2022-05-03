@@ -12,7 +12,7 @@ const Header = () => {
         <nav className='p-2 md:text-xl mx-auto my-auto md:font-semibold'>
           <Link className='mr-4' to="/home">Home</Link>
           <Link className='mr-4' to="/products">Products</Link>
-          <Link className='mr-4' to="/inventory">Inventory</Link>
+          <Link className='mr-4' to="/inventory/:id">Inventory</Link>
           <Link className='mr-4' to="/blog">Blogs</Link>
           <Link className='mr-4' to="/logIn">LogIn</Link>
         </nav>

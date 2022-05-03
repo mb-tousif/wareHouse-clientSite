@@ -33,7 +33,7 @@ const HomePageInstruments = ({ instrument }) => {
             Update Stock
           </button>
           <button
-            onClick={()=>navigate('/inventory/:id')}
+            onClick={() => navigate("/inventory")}
             type="button"
             data-aos="fade-up"
             data-aos-easing="linear"

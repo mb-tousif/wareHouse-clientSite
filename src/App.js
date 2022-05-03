@@ -16,11 +16,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/inventory" element={<RequireAuth>
+        <Route path="/inventory/:id" element={<RequireAuth>
           <Inventory/>
         </RequireAuth>} />
         <Route path='/logIn' element={<LogIn/>}/>
-        <Route path='/inventory/:id' element={<ManageInventory/>}/>
+        <Route path='/inventory' element={<ManageInventory/>}/>
 
       </Routes>
       <Footer/>
