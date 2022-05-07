@@ -24,16 +24,9 @@ const topBanner = () => {
           efficient.
         </p>
       </div>
-      <div className="ml-2 mt-4"
-        data-aos="fade-right"
-        data-aos-offset="300"
-        data-aos-easing="ease-in-sine"
-      >
-        <img
-          src={Banner}
-          alt="Banner"
-          className="mx-auto my-auto bg-[#d7dfe3] shadow-xl rounded-xl"
-        />
+      <div className="ml-2 mt-4" data-aos="fade-right" data-aos-offset="300"
+        data-aos-easing="ease-in-sine">
+        <img src={Banner} alt="Banner" className="mx-auto my-auto bg-[#d7dfe3] shadow-xl rounded-xl"/>
       </div>
     </div>
   );

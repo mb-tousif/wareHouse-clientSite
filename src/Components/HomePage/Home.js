@@ -7,15 +7,17 @@ import TopBanner from '../topBanner/TopBanner';
 import CoreValues from '../coreValues/CoreValues';
 import Address from '../Address/Address';
 import WhyYouChoose from '../WhyYouChoose/WhyYouChoose';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
     const [instruments] = useData();
-    // console.log(instruments);
+    const navigate = useNavigate();
     return (
-      <div className='w-full'>
+      <div className="w-full">
         <marquee className="w-3/5 p-2 font-bold text-emerald-800" behavior="scroll" direction="left">&#9993; মাস্ক ব্যবহার করুন, নিরাপদ থাকুন।</marquee>
         <TopBanner />
-        <h1 data-aos="fade-up" data-aos-duration="3000" className="md:text-3xl font-bold text-[#17849d] md:p-10">Our Some Leading Products</h1>
+        <h1 data-aos="fade-up" data-aos-duration="3000"
+          className="md:text-3xl font-bold text-[#17849d] md:p-10">Our Some Leading Products</h1>
         <div className="md:grid gap-10 md:grid-cols-3">
           {instruments
             .map((instrument) => (
@@ -26,8 +28,11 @@ const Home = () => {
             ))
             .slice(4, 10)}
         </div>
+        <button onClick={() => navigate("/inventory")}
+            type="button" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="2000"
+            className="mt-4 mx-auto my-auto block p-3 bg-[#17849d] text-white rounded-full shadow-md hover:bg-purple-700 focus:bg-purple-600 focus:shadow-lg focus:outline-none active:bg-purple-900 transition duration-150 ease-in-out">Manage Inventories &#10148;</button>
         <CoreValues />
-        <WhyYouChoose/>
+        <WhyYouChoose />
         <Address />
       </div>
     );
