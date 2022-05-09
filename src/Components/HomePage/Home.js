@@ -28,7 +28,7 @@ const Home = () => {
             ))
             .slice(4, 10)}
         </div>
-        <button onClick={() => navigate("/inventory")}
+        <button onClick={() => navigate("/manageInventory")}
             type="button" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="2000"
             className="mt-4 mx-auto my-auto block p-3 bg-[#17849d] text-white rounded-full shadow-md hover:bg-purple-700 focus:bg-purple-600 focus:shadow-lg focus:outline-none active:bg-purple-900 transition duration-150 ease-in-out">Manage Inventories &#10148;</button>
         <CoreValues />

@@ -11,9 +11,7 @@ const WhyYouChoose = () => {
           <div className="w-4/6 text-justify mx-auto my-auto text-[#46666d]">
             <p className="mt-4" data-aos="fade-down-right">
               <span className="font-bold">“Neurosurgical Instruments Ltd's”</span>
-              is the leading medical and health equipment supplier in
-              Bangladesh. We are incorporated as a joint-stock company,
-              established in 2007.
+              is the leading medical and health equipment supplier in Bangladesh. We are incorporated as a joint-stock company, established in 2007.
             </p>
             <p className="mt-4" data-aos="fade-up-right">
               Our mission is to provide the best service and widest the range of

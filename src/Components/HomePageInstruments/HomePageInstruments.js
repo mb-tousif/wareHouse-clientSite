@@ -5,12 +5,8 @@ const HomePageInstruments = ({ instrument }) => {
   const { name, img, description, price, quantity, supplier } = instrument;
   
   return (
-    <div
-      data-aos="flip-right"
-      data-aos-easing="ease-in-sine"
-      data-aos-duration="4000"
-      className="flex justify-center m-6 text-[#17849d]"
-    >
+    <div data-aos="flip-right" data-aos-easing="ease-in-sine"
+      data-aos-duration="4000" className="flex justify-center m-6 text-[#17849d]">
       <div className="rounded-lg shadow-2xl bg-[#d7dfe3] max-w-sm">
         <img className="rounded-t-lg h-72" src={img} alt="product" />
         <div className="p-6">
