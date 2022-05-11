@@ -24,7 +24,9 @@ function App() {
         </RequireAuth>}/>
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/logIn" element={<LogIn />} />
-        <Route path="/manageInventory" element={<ManageInventory />} />
+        <Route path="/manageInventory" element={<RequireAuth>
+          <ManageInventory />
+        </RequireAuth>}/>
         <Route path="/register" element={<Register />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>

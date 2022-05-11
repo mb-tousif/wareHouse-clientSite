@@ -5,7 +5,7 @@ import InventoryItems from '../InventoryItems/InventoryItems';
 const Inventory = () => {
     const [instruments] = useData();
     return (
-      <div className="md:grid grid-cols-3">
+      <div className="md:grid mx-auto my-auto grid-cols-3">
         {instruments.map((instrument) => (
           <InventoryItems key={instrument._id} instrument={instrument} />
         ))}

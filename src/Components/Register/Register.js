@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import Github from '../../images/GitHub.png'
 import Google from "../../images/google.svg";
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { auth } from '../../Firebase.init';
 import { useCreateUserWithEmailAndPassword, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const Register = () => {
+  const location = useLocation();
+  let from = location.state?.from?.pathname || "/inventory";
     const [agree, setAgree] = useState(false);
     const [createUserWithEmailAndPassword, user, loading, error] =
       useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
@@ -24,14 +26,13 @@ const Register = () => {
   }
  
    if (googleUser || githubUser) {
-     navigate("/inventory");
+     navigate(from, { replace: true });
    }
       const handleSignUpForm = (event) => {
         event.preventDefault();
         const email = event.target.email.value;
         const password = event.target.password.value;
         const passwordConform = event.target.passwordConform.value;
-        console.log(email, password, passwordConform);
 
         if (password !== passwordConform) {
           return toast.error("your password does not match");
@@ -40,7 +41,9 @@ const Register = () => {
           return toast.error("please character up to 6 digit");
         }
         createUserWithEmailAndPassword(email, password);
-        navigate("/logIn");
+        if (user) {
+          navigate(from, { replace: true });
+        }
       };
 
   return (

@@ -155,7 +155,7 @@ const Blogs = () => {
           </tbody>
         </table>
       </div>
-      <div className="Question-4 flex">
+      <div className="Question-4 md:flex">
         <div className="p-4 md:w-1/2">
           <h2 className="text-xl font-medium p-2 underline">What Is JWT?</h2>
           <p className="text-justify">
