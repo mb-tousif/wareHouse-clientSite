@@ -4,7 +4,6 @@ import Google from "../../images/google.svg";
 import { useNavigate } from 'react-router-dom';
 import { auth } from '../../Firebase.init';
 import { useCreateUserWithEmailAndPassword, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
-// import LoadingToast from '../loadingToast/LoadingToast';
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const Register = () => {

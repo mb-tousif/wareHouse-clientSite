@@ -12,13 +12,13 @@ const ManageInventory = () => {
           <div className="py-4 inline-block min-w-full sm:px-6 lg:px-8">
             <div className="overflow-hidden">
               <table className="min-w-3/5 mx-auto my-auto mt-4 border text-center">
-                <thead className="border-b text-white font-bold bg-[#5a9ec0]">
+                <thead className="border-b text-white md:font-bold bg-[#5a9ec0]">
                   <tr>
-                    <th scope="col" className="px-6 py-4">Item Names</th>
-                    <th scope="col" className="px-6 py-4">Item Images</th>
-                    <th scope="col" className="px-6 py-4">Items Quantities</th>
-                    <th scope="col" className="px-6 py-4">Items Price</th>
-                    <th scope="col" className="px-6 py-4">Action</th>
+                    <th scope="col" className="px-6 md:w-auto sm:w-16 py-4">Item Names</th>
+                    <th scope="col" className="px-6 md:w-auto sm:w-16 py-4">Item Images</th>
+                    <th scope="col" className="px-6 md:w-auto sm:w-8 py-4">Items Quantities</th>
+                    <th scope="col" className="px-6 md:w-auto sm:w-8 py-4">Items Price</th>
+                    <th scope="col" className="px-6 md:w-auto sm:w-12 py-4">Action</th>
                   </tr>
                 </thead>
                   <tbody>

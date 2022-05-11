@@ -6,7 +6,7 @@ const useData = () => {
        fetch("http://localhost:5000/instruments")
          .then((res) => res.json())
          .then((data) => setInstruments(data));
-     }, []);
+     }, [instruments]);
      return [instruments, setInstruments];
 };
 
