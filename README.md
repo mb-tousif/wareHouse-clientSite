@@ -7,6 +7,7 @@
 * This site coded with using REACT.
 * For Authentication I use Firebase and React-firebase-hook.
 * For Backend I used MongoDB.
+* For server I used Heroku.
 * For styling I use Tailwind CSS, daisyUI Tailwind CSS component library,Tailwind Elements
 --
 
