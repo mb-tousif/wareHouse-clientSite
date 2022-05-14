@@ -4,17 +4,20 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { auth } from "../../Firebase.init";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Loading from "../Loading/Loading";
 const LogIn = () => {
   const emailRef = useRef("");
   const passwordRef = useRef("");
   const navigate = useNavigate();
-  const location = useLocation();
+  const location = useLocation("/");
 
   let from = location.state?.from?.pathname || "/inventory";
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
   if (loading) {
-    return toast.success("User Loading!");
+    return (
+      <Loading/>
+    );
   }
   if (user) {
     navigate(from, { replace: true });
@@ -43,6 +46,7 @@ const LogIn = () => {
           type="email"
           ref={emailRef}
           name="email"
+          required
         />
         <br />
         <input
@@ -50,6 +54,7 @@ const LogIn = () => {
           type="password"
           ref={passwordRef}
           name="password"
+          required
         />
         <br />
         <input

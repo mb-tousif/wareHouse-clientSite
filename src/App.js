@@ -11,6 +11,7 @@ import ManageInventory from './Components/manageInventory/ManageInventory';
 import Register from './Components/Register/Register';
 import Blogs from './Components/Blogs/Blogs';
 import PageNotFound from './Components/page-404/PageNotFound';
+import AddInstrument from './Components/AddInstrument/AddInstrument';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/addItems" element={<AddInstrument/>} />
         <Route path="/inventory" element={<RequireAuth>
           <Inventory/>
         </RequireAuth>}/>

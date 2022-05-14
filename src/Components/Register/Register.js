@@ -6,6 +6,7 @@ import { auth } from '../../Firebase.init';
 import { useCreateUserWithEmailAndPassword, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Loading from '../Loading/Loading';
 const Register = () => {
   const location = useLocation();
   let from = location.state?.from?.pathname || "/inventory";
@@ -22,7 +23,7 @@ const Register = () => {
      return toast.success("Registration Success");
    }
   if (googleError || githubError) {
-    return toast.error("Something wrong with registration");
+    return (<Loading/>)
   }
  
    if (googleUser || githubUser) {
@@ -59,13 +60,7 @@ const Register = () => {
             type="email"
             name="email"
             placeholder="ENTER YOUR EMAIL"
-          />
-          <br />
-          <input
-            className="md:w-3/4 rounded-xl bg-slate-200 p-2 m-2"
-            type="password"
-            name="passwordConform"
-            placeholder="Password Conform"
+            required
           />
           <br />
           <input
@@ -73,6 +68,15 @@ const Register = () => {
             type="password"
             name="password"
             placeholder="PASSWORD"
+            required
+          />
+          <br />
+          <input
+            className="md:w-3/4 rounded-xl bg-slate-200 p-2 m-2"
+            type="password"
+            name="passwordConform"
+            placeholder="Password Conform"
+            required
           />
           <br />
           <input

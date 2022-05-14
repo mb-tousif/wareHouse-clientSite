@@ -1,15 +1,17 @@
 import React from "react";
 import { AiFillDelete } from "react-icons/ai";
 import { RiAddBoxFill } from "react-icons/ri";
+import { useNavigate } from "react-router-dom";
 import useData from "../../hooks/useData";
 const ManageItems = ({ instrument }) => {
+  const navigate = useNavigate();
   const {_id, name, quantity, price, img } = instrument;
   const [instruments, setInstruments] = useData();
   const handleDelete = (id) => {
     const confirmYOu = window.confirm("are you confirm you want to delete");
     if (confirmYOu) {
       console.log(id);
-      fetch(`http://localhost:5000/instrument/${id}`, {
+      fetch(`https://peaceful-springs-15043.herokuapp.com/instrument/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -35,7 +37,7 @@ const ManageItems = ({ instrument }) => {
         &#36; {price}
       </td>
       <td class="font-bold text-2xl text-gray-700 md:px-6 md:py-4 whitespace-wrap">
-        <button className="ml-2 hover:text-[#7130be]">
+        <button onClick={()=>navigate('/addItems')} className="ml-2 hover:text-[#7130be]">
           <RiAddBoxFill />
         </button>
         <button onClick={()=>handleDelete(instrument._id)} className="ml-2 hover:text-[#7130be]">
