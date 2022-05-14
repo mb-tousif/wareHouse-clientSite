@@ -1,18 +1,17 @@
 import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import "react-toastify/dist/ReactToastify.css";
 const InventoryItems = ({instrument}) => {
   const { _id, name, img, description, price, quantity, supplier } = instrument;
   const id = useParams();
   const navigate = useNavigate();
  const handleQuantity = (event) => {
    event.preventDefault();
-   if (event.target.increase.value <= 0 ) {
+   if (event.target.update.value <= 0) {
      alert("quantity value is more then 0 please increase quantity");
    } else {
      const quantityData = {
-       quantity: parseInt(event.target.increase.value) + parseInt(quantity),
+       quantity: parseInt(event.target.update.value) + parseInt(quantity),
      };
      fetch(`https://peaceful-springs-15043.herokuapp.com/instruments${id}`, {
        method: "PUT",
@@ -23,10 +22,10 @@ const InventoryItems = ({instrument}) => {
      })
        .then((res) => res.json())
        .then((data) => {
-         console.log("success data", data);
-         // alert('Quantity increase')
-        //  event.target.reset();
-         //  window.location.reload()
+         if (data) {
+           toast("Instrument Quantity Updated!!");
+           event.target.reset();
+         }
        });
    }
  };
@@ -34,25 +33,23 @@ const InventoryItems = ({instrument}) => {
  const delivery = (event) => {
    if (quantity === 0 || quantity < 0) {
      toast.error(
-       "quantity value is more then 0 please increase quantity incresd quantity"
+       "quantity value is less then 0 please increase quantity increased quantity"
      );
    } else {
      const quantityData = {
-       quantity: parseInt(quantity) - parseInt(1),
+       quantity: parseInt(quantity) -1,
      };
-     fetch(`https://peaceful-springs-15043.herokuapp.com/instruments/${id}`, {
+     fetch(`https://peaceful-springs-15043.herokuapp.com/instrument/${id}`, {
        method: "PUT",
        headers: {
          "content-type": "application/json",
        },
        body: JSON.stringify(quantityData),
      })
-       // .then(res=>res.json())
+       .then(res=>res.json())
        .then((data) => {
          console.log("success data", data);
-         // alert('Quantity decrease')
          event.target.reset();
-         // location.reload()
        });
    }
  };
@@ -94,21 +91,10 @@ const InventoryItems = ({instrument}) => {
           >
             ADD Item
           </button>
-          <div className="col-lg-7 col-12 mx-auto">
-            <form onSubmit={handleQuantity} action="">
-              <div className="from-item">
-                <label htmlFor="supplier">Quantity increase</label>
-                <input
-                  type="number"
-                  className=" w-100 h-100 py-2"
-                  name="increase"
-                  id=""
-                  required
-                />
-              </div>
-              <button className="social-btn add-item w-100">
-                increase Quantity
-              </button>
+          <div className="grid grid-cols-1mx-auto">
+            <form onSubmit={handleQuantity}>
+              <input type="number" className="w-3/4 rounded-xl bg-slate-200 p-2 m-2" name="update" required placeholder="Quantity"/>
+              <button className="social-btn add-item w-100">Update Quantity</button>
             </form>
           </div>
         </div>

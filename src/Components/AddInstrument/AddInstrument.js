@@ -1,8 +1,6 @@
 import React from 'react';
 import { toast } from "react-toastify";
-// import MyItems from '../MyItems/MyItems';
 const AddInstrument = () => {
-  // const [myItems, setMyItems]= useState();
     const handleAddItem =(event)=>{
         event.preventDefault()
        const name = event.target.name.value
@@ -25,7 +23,6 @@ const AddInstrument = () => {
            if (result) {
              toast("Your instrument is added!!!");
              event.target.reset();
-            //  setMyItems(result);
            }
          });
      }
@@ -50,9 +47,6 @@ const AddInstrument = () => {
             </button>
           </form>
         </div>
-        {/* {
-          myItems.map(item=><MyItems key={item._id} item={item}/>)
-        } */}
       </div>
     );
 };
